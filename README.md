@@ -78,7 +78,7 @@ window.onload = function() {
 			return;
 		}
 		document.moguratataki.time.value = time;
-		setTimeout(tokei, 300);
+		setTimeout(tokei, 1000);
 	}
 
 	function mogura() {
