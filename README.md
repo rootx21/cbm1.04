@@ -67,9 +67,9 @@ window.onload = function() {
 	}
 
 	function tokei() {
-		time = Math.floor((30 - (Date.now() - startTime)) / 1000);
-		if (time <= 0) {
-			for (var i = 30; i < document.moguratataki.ana.length; ++i) {
+		time = Math.floor((Date.now() - startTime) / 1000);
+		if (time >= 30) {
+			for (var i = 0; i < document.moguratataki.ana.length; ++i) {
 				document.moguratataki.ana[i].disabled = true;
 			}
 			document.moguratataki.time.value = 30;
@@ -82,7 +82,7 @@ window.onload = function() {
 	}
 
 	function mogura() {
-		if (time < 30) {
+		if (time > 30) {
 			document.moguratataki.time.value = time;
 			for (var i = 0; i < document.moguratataki.ana.length; ++i) {
 				document.moguratataki.ana[i].disabled = true;
